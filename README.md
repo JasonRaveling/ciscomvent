@@ -318,8 +318,6 @@ wrapper run it as root.
 ## License
 
 Free software under the **GNU General Public License v3 or later**. It comes with
-ABSOLUTELY NO WARRANTY. `ciscomvent license` prints the full notice, with `--warranty`
-and `--conditions` for the GPL's `show w` and `show c`. The tray's **About ciscomvent**
-carries the same.
+ABSOLUTELY NO WARRANTY.
 
 See [`LICENSE`](LICENSE), or <https://www.gnu.org/licenses/>.
