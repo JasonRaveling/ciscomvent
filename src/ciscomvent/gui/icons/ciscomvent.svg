@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 99.999999 100"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="translate(-48.333828,-48.502116)">
+    <path
+       d="m 82.234351,75.09026 q -17.146596,3.75663 -17.146596,20.929797 0,11.940713 8.900523,18.648983 8.900523,6.70827 24.738223,6.70827 15.575909,0 24.345539,-6.43993 8.76964,-6.57411 8.76964,-18.246497 0,-9.391576 -4.97382,-15.02652 -4.97383,-5.634946 -14.13613,-6.574103 V 55.502116 q 16.36126,0.939158 26.04712,12.209048 9.55498,11.269891 9.55498,29.516381 0,20.393135 -13.35079,32.333855 -13.48167,11.94072 -36.518323,11.94072 -23.167539,0 -36.649213,-12.07489 -13.481676,-12.07488 -13.481676,-32.736347 0,-17.307332 9.031414,-28.308892 9.031414,-11.135725 24.869109,-12.477379 z"
+       id="path1496"
+       style="font-weight:600;font-size:134.288px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';stroke-width:135.669;stroke-linecap:square;stroke-miterlimit:7;paint-order:stroke fill markers" />
+    <path
+       id="rect1261"
+       style="stroke-width:4.59634;stroke-linecap:round;stroke-miterlimit:7;paint-order:stroke fill markers"
+       d="m 93.299795,71.487503 h 9.284365 v 41.961647 h -9.284365 z" />
+    <path
+       id="rect1261-3"
+       style="stroke-width:3.51467;stroke-linecap:round;stroke-miterlimit:7;paint-order:stroke fill markers"
+       d="m 109.12623,83.005333 h 9.28438 v 24.535617 h -9.28438 z" />
+    <path
+       id="rect1261-6"
+       style="stroke-width:3.51467;stroke-linecap:round;stroke-miterlimit:7;paint-order:stroke fill markers"
+       d="m 77.473356,83.005333 h 9.284368 v 24.535617 h -9.284368 z" />
+  </g>
+</svg>

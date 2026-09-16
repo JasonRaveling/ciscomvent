@@ -1,0 +1,44 @@
+# A throwaway stack for exercising ciscomvent against something neutral.
+#
+# Everything is prefixed `ciscomvent-test-` so it is obvious what owns it and so
+# it can never be confused with a real project's containers.
+#
+# The subnet is deliberately NOT pinned. Docker allocates it from the default
+# pool, which is exactly the condition the tool was built for -- discovery has
+# to find the bridge and subnet at runtime rather than being told.
+name: ciscomvent-test
+
+services:
+  # Published on loopback, so `docker ps` reports the
+  # "127.0.0.1:18080->8080/tcp" mapping form.
+  web:
+    image: busybox:latest
+    container_name: ciscomvent-test-web
+    command:
+      - sh
+      - -c
+      - mkdir -p /www && echo 'ciscomvent-test-web ok' > /www/index.html &&
+        exec httpd -f -p 8080 -h /www
+    ports:
+      # Loopback only, and a high port chosen to stay clear of anything a real
+      # project is likely to publish.
+      - "127.0.0.1:18099:8080"
+    restart: unless-stopped
+
+  # Not published, so `docker ps` reports the bare "9090/tcp" form. Both forms
+  # matter: verify.parse_ports has to read the container-side port from each.
+  api:
+    image: busybox:latest
+    container_name: ciscomvent-test-api
+    command:
+      - sh
+      - -c
+      - mkdir -p /www && echo 'ciscomvent-test-api ok' > /www/index.html &&
+        exec httpd -f -p 9090 -h /www
+    expose:
+      - "9090"
+    restart: unless-stopped
+
+networks:
+  default:
+    name: ciscomvent-test-net

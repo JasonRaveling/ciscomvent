@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ciscomvent"
+version = "0.1.0"
+description = "Restore host-to-container reachability under Cisco Secure Client tunnel-all"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+# Core is deliberately stdlib-only: the daemon runs as root, and every added
+# dependency is added attack surface running with those privileges.
+dependencies = []
+
+[project.optional-dependencies]
+gui = ["PyQt5>=5.15"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+ciscomvent = "ciscomvent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# The tray mark. Data rather than a package, so `icons/` needs no __init__.py;
+# gui/app.py reads it back with importlib.resources.
+[tool.setuptools.package-data]
+"ciscomvent.gui" = ["icons/*.svg"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

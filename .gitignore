@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# Repo-local dev tooling: this host has no python3-venv, so pytest is
+# installed here with `pip install --target` rather than system-wide.
+.devtools/
+
+# Captured host state may contain addresses and firewall rules.
+baselines/
+*.baseline.json
