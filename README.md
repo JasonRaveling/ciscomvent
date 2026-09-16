@@ -1,8 +1,8 @@
 # ciscomvent
 
 Restores host-to-container reachability on a Linux workstation while Cisco Secure
-Client is connected in `Tunnel All Traffic` mode, without modifying the VPN client,
-its firewall chains, or its routes.
+Client (formerly AnyConnect) is connected in `Tunnel All Traffic` mode, without
+modifying the VPN client, its firewall chains, or its routes.
 
 It does change your own host state: reclaim routes in a dedicated table selected by a
 policy rule, and narrow accepts at the *top* of `INPUT` and `OUTPUT`, ahead of Cisco's
